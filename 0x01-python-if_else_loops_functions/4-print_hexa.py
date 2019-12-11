@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-for x in range(99):
-    print("{:02d}, ".format(x), end='')
-    if x == 98:
-        print("99".format(x))
+for i in range(99):
+    print("{:d} = {}".format(i, hex(i)))
