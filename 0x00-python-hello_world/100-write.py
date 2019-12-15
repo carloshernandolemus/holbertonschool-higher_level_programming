@@ -4,7 +4,8 @@ import sys
 
 def main():
 
-     sys.stdout.write("and that piece of art is useful - Dora Korpar, 2015-10-19\n")
+     text = "and that piece of art is useful - Dora Korpar, 2015-10-19"
+     sys.stdout.write("{}\n".format(text))
      exit(1)
 
 __name__ == "__main__"
