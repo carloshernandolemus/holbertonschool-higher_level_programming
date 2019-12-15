@@ -1,36 +1,44 @@
+#include<stdio.h>
+#include<stdlib.h>
 #include "lists.h"
+
 /**
- * insert_node - inserts a node
- *
- * @head: the pointer to the head of the linked list
- * @number: the number to include in the n node field
- * Return: pointer to the new node else NULL
+ *insert_node - inserts a node according to sorting
+ *@head: head of the linked list
+ *@number:number to be added to the node
+ *Return: The address of the new node or NULL
  */
+
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *new;
-	listint_t *tmp;
-	listint_t *tmp2;
+	listint_t *tmp1 = NULL;
+	listint_t *tmp2 = NULL;
+	listint_t *new_node = NULL;
 
-	if (!head)
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
 		return (NULL);
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-
-	new->n = number;
-	tmp = *head;
-	if (!tmp || tmp->n >= number)
+	new_node->n = number;
+	new_node->next = NULL;
+	tmp1 = *head;
+	if (*head == NULL || tmp1->n > number)
 	{
-		new->next = tmp, *head = new;
-		return (new);
+		*head = new_node;
+		new_node->next = tmp1;
+		return (*head);
 	}
-
-
-	tmp2 = tmp->next;
-	while (tmp && tmp2 && (tmp2->n < number))
-		tmp = tmp->next, tmp2 = tmp->next;
-
-	tmp->next = new, new->next = tmp2;
-	return (new);
+	while (tmp1->next)
+	{
+		if (tmp1->n < number && tmp1->next->n < number)
+			tmp1 = tmp1->next;
+		else
+		{
+			tmp2 = tmp1->next;
+			tmp1->next = new_node;
+			new_node->next = tmp2;
+			return (*head);
+		}
+	}
+	tmp1->next = new_node;
+	return (*head);
 }
