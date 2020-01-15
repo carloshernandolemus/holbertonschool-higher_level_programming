@@ -41,10 +41,6 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        """ Method that calculates the Rectangle perimeter
-        Returns:
-            rectangle perimeter
-        """
 
         if self.width == 0 or self.height == 0:
             return 0
@@ -67,6 +63,6 @@ class Rectangle:
 
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
- def __del__(self):
- 
+    def __del__(self):
+
         print("Bye rectangle...")
