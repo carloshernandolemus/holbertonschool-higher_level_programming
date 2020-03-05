@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-
-
 def add_integer(a, b=98):
-
-    if not isinstance(a, int) and not isinstance(a, float):
-        raise TypeError("a must be an integer")
-    if not isinstance(b, int) and not isinstance(b, float):
-        raise TypeError("b must be an integer")
-    a = int(a)
-    b = int(b)
-    return (a + b)
+    """ Function that adds 2 integers. """
+    if type(a) not in [int, float]:
+        raise TypeError('a must be an integer')
+    elif type(b) not in [int, float]:
+        raise TypeError('b must be an integer')
+    else:
+        if abs(a + b) == float('inf'):
+            raise OverflowError('overflow error')
+        else:
+            return int(a) + int(b)
