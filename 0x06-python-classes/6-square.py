@@ -4,8 +4,8 @@
 
 class Square:
     """A class that define the size"""
-    def __init__(self, size=0):
-        """Initialize the size"""
+    def __init__(self, size=0, position=(0, 0)):
+        """Initialize the size and the position"""
         self.size = size
         self.position = position
 
