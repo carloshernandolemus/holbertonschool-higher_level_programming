@@ -4,7 +4,6 @@
 
 class Square:
     """This part define the size"""
-
     def __init__(self, size=0):
         """Init the size"""
         self.size = size
