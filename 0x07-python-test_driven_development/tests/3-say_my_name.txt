@@ -1,6 +1,6 @@
-#doctest-2_matrix.py
+#doctest-2_say_my_name.py
 
-""" Attempting to test doing TDD to div 2 list of list in matrix "
+""" Attempting to test doing TDD to print say my name """
 
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
