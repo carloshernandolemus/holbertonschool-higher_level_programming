@@ -4,14 +4,14 @@
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("""Lorem Ipsum. lOrem iPsum? loRem ipSum: lorem ipsum lorem ipsum""")
-Lorem Ipsum.
+>>> text_indentation("""Esto. es? una: prueba""")
+Esto.
 <BLANKLINE>
-lOrem iPsum?
+es?
 <BLANKLINE>
-loRem ipSum:
+una:
 <BLANKLINE>
-lorem ipsum lorem ipsum
+prueba
 
 >>> text_indentation(1)
 Traceback (most recent call last):
