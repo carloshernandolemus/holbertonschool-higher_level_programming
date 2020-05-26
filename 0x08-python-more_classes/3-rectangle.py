@@ -3,6 +3,7 @@
 
 
 class Rectangle:
+    """Class rectangle"""
 
     def __init__(self, width=0, height=0):
         """This part define the instance method"""
@@ -50,12 +51,11 @@ class Rectangle:
 
     def __str__(self):
 
-        rectangle = ""
-
-        if self.width == 0 or self.height == 0:
+        rectangle = ''
+        if self.height is 0 or self.width is 0:
             return(rectangle)
-
         for i in range(self.height):
-            rectangle += ("#" * self.width) + "\n"
-
-        return(rectangle[:-1])
+            rectangle += ('#' * self.width)
+            if i != self.height - 1:
+                rectangle += '\n'
+        return(rectangle)
