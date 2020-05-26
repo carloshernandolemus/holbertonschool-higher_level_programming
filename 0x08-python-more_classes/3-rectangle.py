@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""This is a rectangle class"""
 
 
 class Rectangle:
 
     def __init__(self, width=0, height=0):
-        """This part define the instance method"""
+
         self.width = width
         self.height = height
 
@@ -39,23 +38,23 @@ class Rectangle:
 
     def area(self):
 
-        return(self.width * self.height)
+        return self.width * self.height
 
     def perimeter(self):
 
         if self.width == 0 or self.height == 0:
             return 0
 
-        return((2 * self.width) + (2 * self.height))
+        return (2 * self.width) + (2 * self.height)
 
     def __str__(self):
 
         rectangle = ""
 
         if self.width == 0 or self.height == 0:
-            return(rectangle)
+            return rectangle
 
         for i in range(self.height):
             rectangle += ("#" * self.width) + "\n"
 
-        return(rectangle[:-1])
+        return rectangle[:-1]
