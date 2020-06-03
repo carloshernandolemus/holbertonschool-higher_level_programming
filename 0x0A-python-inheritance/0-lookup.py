@@ -1,3 +1,7 @@
 #!/usr/bin/python3
+"""Def function"""
+
+
 def lookup(obj):
-    return dir(obj)
+    """Documentation"""
+    return(dir(obj))
