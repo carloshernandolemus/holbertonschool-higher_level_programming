@@ -1,9 +1,11 @@
 #!/usr/bin/node
-const request = require('request');
-const id = process.argv[2];
-request('http://swapi.co/api/films/' + id + '/', function (error, response, body) {
-  if (error == null) {
-    const json = JSON.parse(body);
-    console.log(json.title);
+const req = require('request');
+const pnt = process.argv[2];
+const zelda = `https://swapi-api.hbtn.io/api/films/${pnt}/`;
+req.get(zelda, function (error, response, body) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(JSON.parse(body).title);
   }
 });
